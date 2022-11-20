@@ -85,10 +85,13 @@ void vendor_load_properties()
 
     if (region == "INDIA") { // India
         set_device_props("POCO", "22021211RI", "munch_in", "POCO F4");
+        property_override("ro.product.mod_device", "munch_in_global");
     } else if (region == "CN") { // China
         set_device_props("Redmi", "22021211RC", "munch", "Redmi K40S");
+        property_override("ro.product.mod_device", "munch");
     } else { // Global
         set_device_props("POCO", "22021211RG", "munch_global", "POCO F4");
+        property_override("ro.product.mod_device", "munch_global");
     }
 
     // Set hardware revision

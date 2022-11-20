@@ -141,6 +141,9 @@ TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
 # Inherit from ReloadedOS configuration
 include vendor/reloaded/config/BoardConfigReloaded.mk
 
+# Inherit from proprietary files for miuicamera
+-include vendor/munch-miuicamera/products/board.mk
+
 # Screen density
 TARGET_SCREEN_DENSITY := 440
 
