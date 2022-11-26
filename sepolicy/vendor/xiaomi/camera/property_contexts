@@ -1,2 +1,5 @@
 # Camera sensor properties
 vendor.camera.sensor.                      u:object_r:vendor_camera_sensor_prop:s0
+
+# MiuiCam mode properties
+sys.camera.miui.apk                        u:object_r:vendor_camera_prop:s0
