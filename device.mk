@@ -153,7 +153,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.sf.use_latest_hwc_vsync_period=0
 
 PRODUCT_VENDOR_PROPERTIES += \
-    debug.sf.disable_backpressure=1 \
     debug.sf.enable_hwc_vds=1 \
     ro.surface_flinger.set_idle_timer_ms=1000 \
     ro.surface_flinger.set_touch_timer_ms=1000 \
