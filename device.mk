@@ -154,6 +154,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.enable_hwc_vds=1 \
+    persist.sys.sf.native_mode=258 \
     ro.surface_flinger.set_idle_timer_ms=1000 \
     ro.surface_flinger.set_touch_timer_ms=1000 \
     ro.surface_flinger.set_display_power_timer_ms=1000 \
