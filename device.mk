@@ -31,7 +31,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
-PRODUCT_PRODUCT_PROPERTIES += \
+PRODUCT_ODM_PROPERTIES += \
     aaudio.mmap_policy=1 \
     ro.vendor.audio.sdk.fluencetype=fluence \
     vendor.audio.adm.buffering.ms=6 \
@@ -41,17 +41,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
     vendor.audio.offload.multiple.enabled=true \
     vendor.audio.offload.track.enable=false
 
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.config.media_vol_default=8 \
-    ro.config.media_vol_steps=25 \
-    ro.config.vc_call_vol_default=9 \
-    ro.config.vc_call_vol_steps=11
-
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.audio.delta.refresh=true \
     persist.vendor.audio.misound.disable=true \
     persist.vendor.audio.ring.filter.mask=0 \
     ro.audio.monitorRotation=true \
+    ro.config.vc_call_vol_default=9 \
+    ro.config.vc_call_vol_steps=11 \
     ro.vendor.audio.dump.mixer=false \
     ro.vendor.audio.feature.fade=true \
     ro.vendor.audio.gain.support=true \
@@ -145,8 +141,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/parts/privapp-permissions-parts.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-parts.xml
 
 # Display
-PRODUCT_PRODUCT_PROPERTIES += \
+PRODUCT_ODM_PROPERTIES += \
     persist.sys.sf.color_mode=0 \
+    ro.surface_flinger.set_display_power_timer_ms=1000 \
+    ro.surface_flinger.set_idle_timer_ms=1000 \
+    ro.surface_flinger.set_touch_timer_ms=1000 \
+    ro.surface_flinger.use_content_detection_for_refresh_rate=true \
     vendor.display.use_smooth_motion=0
 
 PRODUCT_SYSTEM_PROPERTIES += \
@@ -155,10 +155,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.enable_hwc_vds=1 \
     persist.sys.sf.native_mode=258 \
-    ro.surface_flinger.set_idle_timer_ms=1000 \
-    ro.surface_flinger.set_touch_timer_ms=1000 \
-    ro.surface_flinger.set_display_power_timer_ms=1000 \
-    ro.surface_flinger.use_content_detection_for_refresh_rate=true \
     ro.vendor.display.paneltype=2 \
     ro.vendor.display.sensortype=2 \
     vendor.display.defer_fps_frame_count=2 \
@@ -200,7 +196,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.fp.vendor=fpc,goodix \
     ro.hardware.fp.sideCap=true
 
