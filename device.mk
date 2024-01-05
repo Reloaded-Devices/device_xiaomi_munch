@@ -290,6 +290,7 @@ PRODUCT_PACKAGES += \
     MunchSettingsOverlay \
     MunchSystemUIOverlay \
     MunchWifiOverlay \
+    MunchWifiMainlineOverlay \
     NoCutoutOverlay
 
 # Partitions
