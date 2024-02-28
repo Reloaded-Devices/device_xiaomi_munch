@@ -152,14 +152,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.qdcm.mode_combine=1 \
     vendor.display.use_layer_ext=0
 
-# Doze
-PRODUCT_PACKAGES += \
-    ParanoidDoze
-
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.sensor.pickup=xiaomi.sensor.pickup \
-    ro.sensor.pickup.lower.value=2
-
 # DPM
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.dpm.feature=1 \
